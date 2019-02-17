@@ -25,10 +25,7 @@ public class NumberTheory_CombinationPascal {
 			return arr[n][m];
 		} 
 		
-		
-		
 		arr[n][m] = getPascal(n - 1, m - 1) + getPascal(n - 1, m);
 		return arr[n][m];
-		
 	}
 }
