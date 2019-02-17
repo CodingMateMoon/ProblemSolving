@@ -25,5 +25,20 @@ public class NumberTheory_CombinationPascal {
 		}
 		System.out.println((int) result);
 	}
+	
+	public static int getPascal(int n, int m) {
+		if (arr[n][m] != 0)
+			return arr[n][m];
+		if (n == 0 || n == 1 || m == 0 || n == m) {
+			arr[n][m] = 1;
+			return 1;
+		} if (m == 1) {
+			arr[n][m] = n;
+			return arr[n][m];
+		} 
+		
+		arr[n][m] = getPascal(n - 1, m - 1) + getPascal(n - 1, m);
+		return arr[n][m];
+	}
 
 }
